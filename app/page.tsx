@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import { stripe } from "@/lib/stripe";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Carousel } from "@/components/carousel";
 
 export default async function Home() {
 
@@ -31,6 +32,9 @@ export default async function Home() {
           </div>
             <Image alt = "Banner Image" className="rounded" width={450} height={450} src={products.data[0].images[0]} />
           </div>
+        </section>
+        <section>
+          <Carousel  products={products.data}/>
         </section>
       </div>
   );

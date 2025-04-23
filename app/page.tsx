@@ -26,7 +26,7 @@ export default async function Home() {
                 className="inline-flex items-center justify-center rounded-full px-6 py-3 bg-black text-white"> 
               <Link href="/products" 
                     className="inline-flex items-center justify-center rounded-full px-6 py-3"> 
-                    Browse All products
+                    Browse All products owned by Manoj
               </Link>
             </Button>
           </div>

@@ -1,7 +1,7 @@
 'use client'
 
 import Link from "next/link"
-
+import { ShoppingCartIcon, Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
 
 export const Navbar = () => {
 
@@ -16,6 +16,9 @@ export const Navbar = () => {
                 <Link href = "/checkout" className="hover:text-blue-600">Checkout</Link>
             </div>
         <div className="flex items-center space-x-4">
+            <Link href="/checkout">
+                <ShoppingCartIcon /> 
+            </Link>
         </div>
         </div>
     </nav>

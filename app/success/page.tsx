@@ -5,7 +5,7 @@ import Link from "next/link"
 import { useEffect } from "react";
 
 
-export default function successPage() {
+export default function SuccessPage() {
 
     const {clearCart} = useCartStore();
 

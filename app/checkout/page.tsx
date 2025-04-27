@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useCartStore } from "@/store/cart-store"
+import { CheckoutAction } from "./checkout-data";
 
 export default function CheckoutPage () {
 
@@ -47,7 +48,10 @@ export default function CheckoutPage () {
                     </div>
                     </CardContent>
                 </Card>
-                <form className="max-w-md mx-auto">
+                <form action = {CheckoutAction} className="max-w-md mx-auto">
+                    
+                    <input type="hidden" name ="items" value = {JSON.stringify(items)}></input> 
+
                     <Button type = "submit" variant={"default"}> 
                         Proceed to Payment
                     </Button>

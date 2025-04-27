@@ -6,7 +6,7 @@ import { useCartStore } from "@/store/cart-store"
 
 export default function CheckoutPage () {
 
-    const {items, addItem, removeItem} = useCartStore();
+    const {items, addItem, removeItem, clearCart} = useCartStore();
 
     const total = items.reduce((acc, item) => acc + item.price * item.quantity, 0)
 
@@ -47,8 +47,16 @@ export default function CheckoutPage () {
                     </div>
                     </CardContent>
                 </Card>
-                <form >
-                    <Button variant={"default"}> Proceed to Payment</Button>
+                <form className="max-w-md mx-auto">
+                    <Button type = "submit" variant={"default"}> 
+                        Proceed to Payment
+                    </Button>
+                    <div className="max-w-md mx-auto mt-5">
+                    <Button onClick={() => clearCart()} variant={"default"}> 
+                        Clear Cart
+                    </Button>
+                    </div>
                 </form>
+               
           </div>
 }

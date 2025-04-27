@@ -8,9 +8,9 @@ export default function CheckoutPage () {
 
     const {items, addItem, removeItem} = useCartStore();
 
-    const price = items.reduce((acc, item) => acc + item.price * item.quantity, 0)
+    const total = items.reduce((acc, item) => acc + item.price * item.quantity, 0)
 
-    if (price === 0 || items.length === 0) {
+    if (total === 0 || items.length === 0) {
         
         return <div> <h1> Your cart is empty</h1></div>
     } 
@@ -38,6 +38,10 @@ export default function CheckoutPage () {
                             </li>
                         ))} 
                     </ul>
+
+                    <div> 
+                        Total : ${(total/100).toFixed(2)}
+                    </div>
                     </CardContent>
                 </Card>
 
